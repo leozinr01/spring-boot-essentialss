@@ -58,11 +58,16 @@ http://localhost:8082
 
 Os endpoints foram testados utilizando Postman, garantindo o correto funcionamento das requisições HTTP e a estrutura das respostas JSON.
 
-## 🔄 Funcionalidade atual
+## 🔄 Funcionalidades
 
-Atualmente, a API possui um endpoint funcional:
+Atualmente, a API possui um **CRUD completo de produtos**:
 
-GET /v1/produtos
+- 📥 **GET /v1/produtos** → Listar produtos  
+- ➕ **POST /v1/produtos** → Criar produto  
+- ✏️ **PUT /v1/produtos/{id}** → Atualizar produto  
+- ❌ **DELETE /v1/produtos/{id}** → Deletar produto  
+
+---
 
 Esse endpoint retorna uma lista de produtos armazenados em memória.
 
