@@ -2,6 +2,7 @@ package br.com.ribeiro.spring_boot_essentials.service;
 
 import br.com.ribeiro.spring_boot_essentials.database.model.ProdutoEntity;
 import br.com.ribeiro.spring_boot_essentials.dto.ProdutoDto;
+import br.com.ribeiro.spring_boot_essentials.exception.NotFoundException;
 import lombok.Builder;
 import org.springframework.stereotype.Service;
 
@@ -56,8 +57,26 @@ public class ProdutoService {
                 .quantidade(produtoDto.getQuantidade())
                 .build();
         PRODUTOS.add(novoProduto);
-        return novoProduto;
+
+            return novoProduto;
     }
+    public ProdutoEntity atualizarProduto(ProdutoDto produtoDto, Integer id) throws NotFoundException {
+        ProdutoEntity produto = PRODUTOS.stream()
+                .filter(p -> p.getId().equals(id))
+                .findAny()
+                .orElseThrow(() -> new NotFoundException("Produto não encontrado"));
+
+        produto.setNome(produtoDto.getNome());
+        produto.setPreco(produtoDto.getPreco());
+        produto.setQuantidade(produtoDto.getQuantidade());
+
+        return produto;
+    }
+    public void removerProduto(Integer id)  {
+        PRODUTOS.removeIf( p -> p.getId().equals(id));
+    }
+
 }
+
 
 
