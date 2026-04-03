@@ -1,48 +1,31 @@
 # 🚀 Spring Boot Essentials - API de Produtos
 
-## 📌 Visão geral
+## 👨‍💻 Sobre o projeto
 
-Este projeto consiste no desenvolvimento de uma **API REST de gerenciamento de produtos**, utilizando **Java e Spring Boot**, com o objetivo de consolidar conhecimentos em backend e aplicar boas práticas utilizadas no mercado.
+Este projeto consiste no desenvolvimento de uma API REST para gerenciamento de produtos, utilizando Java + Spring Boot, com o objetivo de consolidar conhecimentos em backend e aplicar boas práticas utilizadas no mercado.  
 
-A aplicação foi estruturada para simular o crescimento real de um sistema, iniciando com dados em memória e evoluindo para uma arquitetura mais robusta.
+A proposta é simular a evolução real de uma aplicação, iniciando com dados em memória e evoluindo para uma arquitetura mais robusta, organizada e escalável, incluindo persistência em banco de dados e um CRUD completo.
 
----
+## 🎯 Objetivo
 
-## 🎯 Objetivo do projeto
+O principal objetivo deste projeto é construir uma API REST do zero, aplicando conceitos de arquitetura em camadas, separação de responsabilidades, manipulação de requisições HTTP e respostas em JSON, evoluindo progressivamente até um sistema completo alinhado com práticas do mercado.
 
-O principal objetivo deste projeto é:
+## 🧱 Arquitetura
 
-- Entender como uma API REST é construída na prática
-- Aplicar conceitos de **arquitetura em camadas**
-- Separar responsabilidades no código
-- Trabalhar com requisições HTTP e respostas em JSON
-- Evoluir progressivamente até um CRUD completo com banco de dados
+O projeto segue o padrão de arquitetura em camadas, amplamente utilizado em aplicações backend:
 
----
+- Controller → Responsável por receber as requisições HTTP e retornar as respostas  
+- Service → Onde ficam as regras de negócio da aplicação  
+- DTO → Utilizado para transferência de dados entre as camadas  
+- Model → Representa a estrutura da entidade dentro da aplicação  
 
-## 🧱 Arquitetura utilizada
+Essa organização facilita a manutenção, escalabilidade e clareza do código.
 
-O projeto segue o padrão de **arquitetura em camadas**, muito utilizado em aplicações backend:
-
-### 🔹 Controller
-Responsável por receber as requisições HTTP e retornar as respostas ao cliente.
-
-### 🔹 Service
-Camada onde ficam as **regras de negócio** da aplicação.
-
-### 🔹 DTO (Data Transfer Object)
-Utilizado para transportar os dados entre as camadas, evitando exposição direta da entidade.
-
-### 🔹 Model
-Representa a estrutura do objeto (Produto) dentro da aplicação.
-
----
-
-## 🔄 Funcionamento atual
+## 🔄 Funcionalidade atual
 
 Atualmente, a API possui um endpoint funcional:
 
-### 📥 GET /v1/produtos
+GET /v1/produtos
 
 Esse endpoint retorna uma lista de produtos armazenados em memória.
 
@@ -63,3 +46,42 @@ Esse endpoint retorna uma lista de produtos armazenados em memória.
     "quantidade": 10
   }
 ]
+
+🛠️ Tecnologias utilizadas
+
+Java 17+
+Spring Boot
+Spring Web
+Lombok
+Swagger (Springdoc OpenAPI)
+Postman
+
+▶️ Como rodar o projeto
+git clone https://github.com/leozinr01/spring-boot-essentialss
+cd spring-boot-essentialss
+./mvnw spring-boot:run
+
+A aplicação estará disponível em:
+
+http://localhost:8082
+
+🧪 Testes
+
+Os endpoints foram testados utilizando Postman, garantindo o correto funcionamento das requisições HTTP e a estrutura das respostas JSON.
+
+🚧 Próximas melhorias
+Implementar endpoint de criação (POST)
+Integração com banco de dados (JPA/Hibernate)
+Criar camada de repository
+Implementar update e delete (CRUD completo)
+Adicionar validações
+Tratamento de exceções
+💡 Sobre o projeto
+
+Este projeto faz parte da minha evolução como desenvolvedor backend, com foco em construir aplicações organizadas, escaláveis e alinhadas com as práticas do mercado.
+
+👨‍💻 Autor
+
+Leonardo Ribeiro
+
+Linkedin: https://www.linkedin.com/in/leozinr01/
