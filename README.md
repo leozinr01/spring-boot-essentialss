@@ -20,6 +20,43 @@ O projeto segue o padrão de arquitetura em camadas, amplamente utilizado em apl
 - Model → Representa a estrutura da entidade dentro da aplicação  
 
 Essa organização facilita a manutenção, escalabilidade e clareza do código.
+🛠️ Tecnologias utilizadas
+
+Java 17+
+Spring Boot
+Spring Web
+Lombok
+Swagger (Springdoc OpenAPI)
+Postman
+
+🚧 Próximas melhorias
+Implementar endpoint de criação (POST)
+Integração com banco de dados (JPA/Hibernate)
+Criar camada de repository
+Implementar update e delete (CRUD completo)
+Adicionar validações
+Tratamento de exceções
+
+💡 Sobre o projeto
+Este projeto faz parte da minha evolução como desenvolvedor backend, com foco em construir aplicações organizadas, escaláveis e alinhadas com as práticas do mercado.
+
+👨‍💻 Autor
+
+Leonardo Ribeiro
+Linkedin: https://www.linkedin.com/in/leozinr01/
+
+▶️ Como rodar o projeto
+git clone https://github.com/leozinr01/spring-boot-essentialss
+cd spring-boot-essentialss
+./mvnw spring-boot:run
+
+A aplicação estará disponível em:
+
+http://localhost:8082
+
+🧪 Testes
+
+Os endpoints foram testados utilizando Postman, garantindo o correto funcionamento das requisições HTTP e a estrutura das respostas JSON.
 
 ## 🔄 Funcionalidade atual
 
@@ -47,41 +84,4 @@ Esse endpoint retorna uma lista de produtos armazenados em memória.
   }
 ]
 
-🛠️ Tecnologias utilizadas
 
-Java 17+
-Spring Boot
-Spring Web
-Lombok
-Swagger (Springdoc OpenAPI)
-Postman
-
-▶️ Como rodar o projeto
-git clone https://github.com/leozinr01/spring-boot-essentialss
-cd spring-boot-essentialss
-./mvnw spring-boot:run
-
-A aplicação estará disponível em:
-
-http://localhost:8082
-
-🧪 Testes
-
-Os endpoints foram testados utilizando Postman, garantindo o correto funcionamento das requisições HTTP e a estrutura das respostas JSON.
-
-🚧 Próximas melhorias
-Implementar endpoint de criação (POST)
-Integração com banco de dados (JPA/Hibernate)
-Criar camada de repository
-Implementar update e delete (CRUD completo)
-Adicionar validações
-Tratamento de exceções
-💡 Sobre o projeto
-
-Este projeto faz parte da minha evolução como desenvolvedor backend, com foco em construir aplicações organizadas, escaláveis e alinhadas com as práticas do mercado.
-
-👨‍💻 Autor
-
-Leonardo Ribeiro
-
-Linkedin: https://www.linkedin.com/in/leozinr01/
